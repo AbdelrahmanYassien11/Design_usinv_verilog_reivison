@@ -1,0 +1,90 @@
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+vlog clock_divider.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 12:55:02 on Oct 04,2024
+# vlog -reportprogress 300 clock_divider.v 
+# -- Compiling module clock_divider
+# 
+# Top level modules:
+# 	clock_divider
+# End time: 12:55:02 on Oct 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc -debugDB work.clock_divider
+# vsim -voptargs="+acc" -debugDB work.clock_divider 
+# Start time: 12:55:21 on Oct 04,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# Loading work.clock_divider(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -position insertpoint sim:/clock_divider/*
+force -freeze sim:/clock_divider/clk 1 0, 0 {50 ns} -r 100
+force -freeze sim:/clock_divider/resetn 1'h1 0
+run
+force -freeze sim:/clock_divider/resetn 1'h0 0
+run
+force -freeze sim:/clock_divider/resetn 1'h1 0
+run
+run
+run
+run
+run
+run
+run
+run
+vlog clock_divider.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 12:58:51 on Oct 04,2024
+# vlog -reportprogress 300 clock_divider.v 
+# -- Compiling module clock_divider
+# 
+# Top level modules:
+# 	clock_divider
+# End time: 12:58:51 on Oct 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# Loading work.clock_divider(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -position insertpoint sim:/clock_divider/*
+force -freeze sim:/clock_divider/clk 1 0, 0 {50 ns} -r 100
+force -freeze sim:/clock_divider/resetn 1'h1 0
+run
+force -freeze sim:/clock_divider/resetn 1'h0 0
+run
+force -freeze sim:/clock_divider/resetn 1'h1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog clock_divider.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 16:17:55 on Oct 04,2024
+# vlog -reportprogress 300 clock_divider.v 
+# -- Compiling module clock_divider
+# 
+# Top level modules:
+# 	clock_divider
+# End time: 16:17:55 on Oct 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

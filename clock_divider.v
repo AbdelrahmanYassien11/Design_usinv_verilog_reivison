@@ -1,6 +1,6 @@
 module clock_divider#(parameter DIV = 2)
 	(	
-		input clk,
+		input clk, resetn,
 		output reg clk_div
 		);
 
@@ -9,13 +9,16 @@ module clock_divider#(parameter DIV = 2)
 	always@(clk or negedge resetn) begin
 		if(!resetn)begin
 			counter <= 0;
-			clk_div <= clk;
+			clk_div <= 0;
 		end
 		else begin
-			if(counter == DIV) begin
-				clk_div = ~clk_div;
+			if(counter == DIV-1) begin
+				clk_div <= ~clk_div;
+				counter <= 0;
 			end
-			counter <= counter + 1;
+			else begin
+				counter <= counter + 1;
+			end
 		end
 	end
 
