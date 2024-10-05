@@ -7,6 +7,7 @@ R0
 R0
 R0
 R0
+R0
 !s11f MIXED_VERSIONS
 13
 !s112 1.1
@@ -32,45 +33,35 @@ VYc>LgbO^X3nZFEj524=032
 R2
 =1-98e743467fb1-66ff3768-34-234c
 R3
-Z6 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 R4
 n@_opt1
 R5
 R1
-T_opt2
-!s110 1728047886
-VAfIDiNR2k1SF?Cmnha=Aa0
-04 13 4 work clock_divider fast 0
-=3-98e743467fb1-66ffeb0c-159-473c
-R3
-R6
-R4
-n@_opt2
-R5
 vclock_divider
-!s110 1728047875
+!s110 1728161086
 !i10b 1
-!s100 >^M_aG@mQW?0=Uo?NaAS:1
-IHIhmFdXb]jTh9g2Z2FXLk2
+!s100 9@bMYNeX>cG50BI8@L5Tk3
+Ih5IKm<]2OJ`ObTC2fFjCa0
 R1
-w1728047862
+w1728161084
 8clock_divider.v
 Fclock_divider.v
-!i122 13
-L0 1 25
-Z7 VDg1SIo80bB@j0V0VzS_@n1
-Z8 OL;L;2021.1;73
+!i122 17
+L0 2 67
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2021.1;73
 r1
 !s85 0
 31
-!s108 1728047875.000000
+!s108 1728161086.000000
 !s107 clock_divider.v|
-!s90 -reportprogress|300|clock_divider.v|
+!s90 clock_divider.v|
 !i113 0
-Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R4
 vripple_counter
-Z10 !s110 1728025811
+Z9 !s110 1728025811
 !i10b 1
 !s100 FEz_`9b<FKJmF]C=DRS?K2
 IKWlR0WP9HSb^V3M2`T4T01
@@ -80,19 +71,19 @@ w1728025676
 Fripple_counter.v
 !i122 8
 L0 3 52
+R6
 R7
-R8
 r1
 !s85 0
 31
-Z11 !s108 1728025811.000000
-Z12 !s107 ripple_counter.v|t_dff.v|
-Z13 !s90 -reportprogress|300|t_dff.v|ripple_counter.v|
+Z10 !s108 1728025811.000000
+Z11 !s107 ripple_counter.v|t_dff.v|
+Z12 !s90 -reportprogress|300|t_dff.v|ripple_counter.v|
 !i113 0
-R9
+R8
 R4
 vt_dff
-R10
+R9
 !i10b 1
 !s100 C<T[Pn0JQSN;7HTPXShmT3
 ICTjZ`4b_hSQ[QooFCKM`21
@@ -102,14 +93,14 @@ w1727998368
 Ft_dff.v
 !i122 8
 L0 1 17
+R6
 R7
-R8
 r1
 !s85 0
 31
+R10
 R11
 R12
-R13
 !i113 0
-R9
+R8
 R4
