@@ -1,11 +1,11 @@
-`define dff
-module clock_divider#(parameter DIV = 2)
+`define dff_counter
+module clock_divider#(parameter DIV = 6)
 	(	
 		input clk, resetn,
 		output clk_div
 		);
 
-`ifdef latch_counter
+`ifdef latch_counter //DIV = 6 will divide by 12 FYI
 
 	integer counter;
 	reg clk_div_reg;
@@ -27,7 +27,7 @@ module clock_divider#(parameter DIV = 2)
 	end
 	assign  clk_div = clk_div_reg;
 
-`elsif dff_counter
+`elsif dff_counter_paramterized
 
 	integer counter;
 	reg clk_div_reg;
@@ -49,16 +49,16 @@ module clock_divider#(parameter DIV = 2)
 	end
 	assign  clk_div = clk_div_reg;	
 
-`elsif dff
+`elsif dff_paramterized
 	
 	reg [DIV-1:0] clk_div_reg;
-
+	integer i;
 	always@(posedge clk or negedge resetn) begin
 		if(!resetn)begin
 			clk_div_reg <= 0;
 		end
 		else begin
-			clk_div_reg <= clk_div_reg[{clk_div_reg[DIV-2:0],~clk_div}];
+			clk_div_reg <= {clk_div_reg[DIV-2:0],~clk_div_reg[DIV-1]};// 00 -> 01 -> 10 -> 
 		end
 	end
 
