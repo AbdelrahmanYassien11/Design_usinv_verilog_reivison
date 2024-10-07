@@ -725,3 +725,64 @@ vlog clock_divider.v
 # 	clock_divider
 # End time: 15:17:03 on Oct 06,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-8611) Generating debug db.
+# Loading work.clock_divider(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+force -freeze sim:/clock_divider/clk 1 0, 0 {50 ns} -r 100
+force -freeze sim:/clock_divider/resetn 1'h1 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/clock_divider/resetn 1'h0 0
+run
+run
+run
+run
+run
+force -freeze sim:/clock_divider/resetn 1'h1 0
+force -freeze sim:/clock_divider/resetn 1'h1 0
+force -freeze sim:/clock_divider/resetn 1'h1 0
+run
+
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 19:02:20 on Oct 07,2024, Elapsed time: 42:33:26
+# Errors: 0, Warnings: 0
