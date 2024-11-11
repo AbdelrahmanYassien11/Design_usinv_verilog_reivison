@@ -7,13 +7,15 @@ module up_down_counter #(parameter WIDTH = 8)
 		
 	);
 
+	reg n_enable_button;
 
 	always@(posedge clk or posedge reset) begin
 		if(reset) begin
 			count <= init_value;
 		end
 		else begin
-			if(enable_button) begin 
+			n_enable_button <= enable_button;
+			if(enable_button & ~n_enable_button) begin 
 				if(up_down) begin
 					count <= count + 1;
 				end
